@@ -3,9 +3,21 @@ layout: home
 title: Home
 short_title: Home
 order: 1
+projects:
+ - title: "Integrating Diverse Transcriptomic Alterations to Identify Cancer-Relevant Genes"
+   thumbnail: "images/projects/davidson_BSSE_summer_school_RNA_DNA_integration.png"
+   link: "content/davidson_BSSE_summer_school_RNA_DNA_integration.pdf"
+   desc:
+    In this project, we performed a comprehensive analysis of transcriptomic alterations across 27 cancer types. We increased the number of samples found to contain an alteration in cancer relevant pathways, and identified cancer relevant genes through a recurrence analysis using both DNA- and RNA-level aberrations.
+
+ - title: "Identification and Characterization of HIF-Dependent Altenative Splicing Events in Pancreatic Cancer"
+   thumbnail: "images/projects/hypoxia-2.png"
+   link: "content/postr_SIB_ISMB.pdf"
+   desc:
+      Hypoxia is prevalent in many tumors and associated with malignant tumor progression. Hypoxia mediates its effects primarily through hypoxia-inducible factors (HIFs), a family of heterodimeric transcription factors composed of distinct HIF1a and a shared HIF1ß subunit. While the effects of HIFs on transcription programs have been extensively studied in the past, little is known about splicing. To determine such roles, we performed RNA-seq on human pancreatic cancer (PDAC) cells subjected to hypoxia in the absence or presence of HIF1ß to define the HIF-dependency of any effects.
 ---
 
-<div class="row">
+<div class="row header-row">
   <div class="col-md-offset-4 col-md-8">
   <h1>About Me</h1>
   </div>
@@ -13,13 +25,13 @@ order: 1
 
 <div class="row">
   <div class="col-md-4">
-    <img class="portrait" src="img/portrait.jpg" />
+    <img class="portrait" src="images/portrait.jpg" />
   </div>
 
   <div class="col-md-8">
-    <p>Hello! I'm Natalie Davidson, a PhD student at <a href="https://www.mskcc.org/">Memorial Sloan Kettering Cancer Center</a>. I'm currently part of the <a href="https://bmi.inf.ethz.ch/">Biomedical Informatics lab at ETH Zürich</a>, lead by Professor Gunnar Rätsch.</p>
+    <p>Hello! I'm Natalie Davidson, a PhD student affiliated with <a href="https://www.mskcc.org/">Memorial Sloan Kettering Cancer Center</a>. I am currently obtaining my Ph.D from <a href="http://compbio.triiprograms.org" target="_blank">Tri-Institutional Program for Computational Biology and Medicine</a> in New York, while conducting research at <a href="http://ethz.ch" target="_blank">ETH Zürich</a>.</p>
 
-    <p>I am interested in understanding the role transcriptional dysregulation plays in cancer. Through my collaborations during my Ph.D., I have been able to conduct single cancer and pan-cancer analyses using RNA-Seq and Ribosome Profiling data. I typically use generalized linear models and generalized linear mixed models, but I am interested in extending to other models as the numbers of samples in cancer analyses grow. I am currently a part of the <a href="http://icgc.org" target="_blank">International Cancer Genome Consortium</a>, where I integrate multiple transcriptional aberrations such as splicing, fusions, over/under expression, allele specific expression, and others in over 1,000 samples to identify cancer relevant genes and alteration patterns. I received my B.Sc. in computer science and minor in mathematics from University of California, Santa Barbara. &nbsp;I received my M.Sc. in computer science from <a href="http://ucla.edu" target="_blank">University of California, Los Angeles</a> under the advisement of <a href="http://www.biolchem.ucla.edu/labs/ernst/" target="_blank">Dr. Jason Ernst</a>. I am currently obtaining my Ph.D from <a href="http://compbio.triiprograms.org" target="_blank">Tri-Institutional Program for Computational Biology and Medicine</a> in New York, while conducting research at <a href="http://ethz.ch" target="_blank">ETH Zürich</a>.</p>
+    <p>I am interested in understanding the role transcriptional dysregulation plays in cancer. Through my collaborations during my Ph.D., I have been able to conduct single cancer and pan-cancer analyses using RNA-Seq and Ribosome Profiling data. I typically use generalized linear models and generalized linear mixed models, but I am interested in extending to other models as the numbers of samples in cancer analyses grow. I am currently a part of the <a href="http://icgc.org" target="_blank">International Cancer Genome Consortium</a>, where I integrate multiple transcriptional aberrations such as splicing, fusions, over/under expression, allele specific expression, and others in over 1,000 samples to identify cancer relevant genes and alteration patterns. I received my B.Sc. in computer science and minor in mathematics from University of California, Santa Barbara. &nbsp;I received my M.Sc. in computer science from <a href="http://ucla.edu" target="_blank">University of California, Los Angeles</a> under the advisement of <a href="http://www.biolchem.ucla.edu/labs/ernst/" target="_blank">Dr. Jason Ernst</a>.
 
     <p>
       <b>Research Focus:</b> extending statistical models to gain deeper understanding of transcriptional dysregulation in cancer.
@@ -27,28 +39,20 @@ order: 1
   </div>
 </div>
 
-<div class="row">
+<div class="row header-row">
   <div class="col-md-12">
     <h1>Projects</h1>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-4">
-    <h3>Project A</h3>
-    <img src="http://via.placeholder.com/350x150" style="width: 100%;" />
-    <p>A short description of the project here.</p>
-  </div>
-
-  <div class="col-md-4">
-    <h3>Project B</h3>
-    <img src="http://via.placeholder.com/350x150" style="width: 100%;" />
-    <p>A short description of the project here.</p>
-  </div>
-
-  <div class="col-md-4">
-    <h3>Project C</h3>
-    <img src="http://via.placeholder.com/350x150" style="width: 100%;" />
-    <p>A short description of the project here.</p>
-  </div>
+  {% for project in page.projects %}
+    <div class="col-md-6 project-box">
+      <a class="project-link" href="{{ project.link }}">
+        <img src="{{ project.thumbnail }}" class="thumb" />
+      </a>
+      <h3>{{ project.title }}</h3>
+      <p class="desc">{{ project.desc }}</p>
+    </div>
+  {% endfor %}
 </div>
