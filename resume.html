@@ -3,10 +3,13 @@ layout: home
 title: Resume
 short_title: Resume
 order: 2
+resume_link: "content/resume_phd_2018/resume_phd_2018.html"
 ---
 
 <div class="row">
-  <div class="col-md-offset-3 col-md-9">
-    {% include Resume.html %}
+  <div class="col-md-offset-2 col-md-12">
+    <iframe frameBorder="0" class="framed-html" width="100%" src="{{ page.resume_link }}" style="border: solid 1px #ccc;">
+      Your client doesn't support iframes. Click here to view the resume: <a href="{{ page.resume_link }}">resume</a>.
+    </iframe>
   </div>
 </div>
