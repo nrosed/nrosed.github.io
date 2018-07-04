@@ -7,6 +7,8 @@ projects:
  - title: "Integrating Diverse Transcriptomic Alterations to Identify Cancer-Relevant Genes"
    thumbnail: "images/projects/davidson_BSSE_summer_school_RNA_DNA_integration.png"
    link: "https://www.biorxiv.org/content/biorxiv/early/2018/03/12/183889.full.pdf"
+   desc:
+    ( <a href="https://www.iscb.org/cms_addon/multimedia/flvmedia.php?i=4065">link to talk</a> )
 
  - title: "Identification and Characterization of HIF-Dependent Altenative Splicing Events in Pancreatic Cancer"
    thumbnail: "images/projects/hypoxia-2.png"
@@ -49,6 +51,9 @@ projects:
         <img src="{{ project.thumbnail }}" class="thumb" />
       </a>
       <h3>{{ project.title }}</h3>
+      {% if project.desc %}
+        <p>{{ project.desc }}</p>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
