@@ -23,11 +23,11 @@ projects:
 </div>
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-2 col-xs-12">
     <img class="portrait" src="images/portrait.jpg" />
   </div>
 
-  <div class="col-md-8">
+  <div class="col-md-8 col-sm-10 col-xs-12">
     <p>Hello! I'm Natalie Davidson, a PhD student affiliated with <a href="https://www.mskcc.org/" target="_blank">Memorial Sloan Kettering Cancer Center</a>. I am currently obtaining my Ph.D from <a href="http://compbio.triiprograms.org" target="_blank">Tri-Institutional Program for Computational Biology and Medicine</a> in New York, while conducting research at <a href="http://ethz.ch" target="_blank">ETH Zürich</a>.</p>
 
     <p>I am interested in understanding the role transcriptional dysregulation plays in cancer. Through my collaborations during my Ph.D., I have been able to conduct single cancer and pan-cancer analyses using RNA-Seq and Ribosome Profiling data. I typically use generalized linear models and generalized linear mixed models, but I am interested in extending to other models as the numbers of samples in cancer analyses grow. I am currently a part of the <a href="http://icgc.org" target="_blank">International Cancer Genome Consortium</a>, where I integrate multiple transcriptional aberrations such as splicing, fusions, over/under expression, allele specific expression, and others in over 1,000 samples to identify cancer relevant genes and alteration patterns.
@@ -52,7 +52,7 @@ projects:
   {% for project in page.projects %}
     <div class="col-md-6 project-box">
       <a class="project-link" target="_blank" href="{{ project.link }}">
-        <img src="{{ project.thumbnail }}" class="thumb" />
+        <img src="{{ project.thumbnail }}" class="thumb img-responsive center-block" />
       </a>
       <h3>{{ project.title }}</h3>
       {% if project.desc %}
