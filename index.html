@@ -16,6 +16,12 @@ projects:
    desc:
     ( <a href="https://www.biorxiv.org/content/10.1101/826156v1.full">link to paper</a> )
 
+code_projects:
+- title: "ssPATHS: Single Sample PATHway Score"
+  link: "https://bioconductor.org/packages/release/bioc/html/ssPATHS.html"
+- title: "My GitHub account (nrosed)"
+  link: "https://github.com/nrosed"
+
 ---
 
 <div class="row header-row">
@@ -42,6 +48,21 @@ projects:
     </p>
   </div>
 </div>
+
+<div class="row header-row">
+  <div class="col-md-12">
+    <h1>Code</h1>
+  </div>
+</div>
+
+<div class="row">
+  <ul>
+  {% for entry in page.code_projects %}
+  <li><a target="_blank" href="{{ entry.link }}"> {{ entry.title }} </a></li>
+  {% endfor %}
+  </ul>
+</div>
+
 
 <div class="row header-row">
   <div class="col-md-12">
