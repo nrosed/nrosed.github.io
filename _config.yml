@@ -13,14 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Natalie Davidson, PhD Candidate
-email: nrd44@cornell.edu
+title: Natalie Davidson, Ph.D.
+email: natalie.davidson@cuanschutz.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal page for Natalie Rose Davidson, Ph.D.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://natalie-r-davidson.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://natalie-r-davidson.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  nrosed
 repository: nrosed/nrosed.github.io
 
@@ -28,6 +26,7 @@ repository: nrosed/nrosed.github.io
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
